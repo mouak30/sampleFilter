@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+    <h1>Sample Filter</h1>
+  
+    <div>
+      <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+      </mat-form-field>
+        
+      <div>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          <ng-container *ngFor="let column of columns" matColumnDef="{{ column.name }}">
+            <th mat-header-cell *matHeaderCellDef>{{ column.label }} </th>
+            <td mat-cell *matCellDef="let animeFilm"> {{animeFilm[column.name]}} </td>
+          </ng-container>
+    
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </div>
+    </div>
+  </div>

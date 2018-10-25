@@ -1,0 +1,19 @@
+.mat-table {
+    width: 1000px;
+}
+.mat-cell {
+    width: 80px;
+}
+.mat-row:nth-child(even){
+    background-color: #C0C0C0;
+}
+.mat-form-field {
+    position: absolute;
+    left: 60px;
+    top: 30px;
+    font-size: 14px;
+    width: 400px;
+}
+table td {
+    text-align: left;
+}
